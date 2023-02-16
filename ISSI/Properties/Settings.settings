@@ -1,0 +1,108 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ISSI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SMSMappings" Type="System.String" Scope="User">
+      <Value Profile="(Default)">A,C,D,E,F,H,I,J,K,L,M,P,G</Value>
+    </Setting>
+    <Setting Name="InstallScheduleLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">R:\installation schedule\current install schedule.xlsx</Value>
+    </Setting>
+    <Setting Name="TempFileDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\ISSI\TempFiles</Value>
+    </Setting>
+    <Setting Name="InstallMappings" Type="System.String" Scope="User">
+      <Value Profile="(Default)">A,K,I,AR,BG,AQ,BC</Value>
+    </Setting>
+    <Setting Name="InstallRows" Type="System.String" Scope="User">
+      <Value Profile="(Default)">8,200</Value>
+    </Setting>
+    <Setting Name="DefaultItemStatus" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="SMSRootPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">R:\Stock, budgets etc</Value>
+    </Setting>
+    <Setting Name="sqlPOItemsMapping" Type="System.String" Scope="User">
+      <Value Profile="(Default)">StockOrJob,JobItemID,Room,ProductType,Item,ProductCode,Description,Colour,Dimensions,Quantity,UnitPrice,SOPID,SupplierID</Value>
+    </Setting>
+    <Setting Name="SMSAddColumns" Type="System.String" Scope="User">
+      <Value Profile="(Default)">O,SMSStatus;B,OtherInfo</Value>
+    </Setting>
+    <Setting Name="ImportFrozenColumn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ProductCode</Value>
+    </Setting>
+    <Setting Name="ImportColumnWidths" Type="System.String" Scope="User">
+      <Value Profile="(Default)">100,100,100,100,100,100,100,100,100,100,100</Value>
+    </Setting>
+    <Setting Name="ImportColumnOrders" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SMSStatus,1;ItemStatusID,2;ProductType,3;ItemAreaID,4;SupplierID,5;SOPID,6;OtherInfo, 18;OrderEarly,19</Value>
+    </Setting>
+    <Setting Name="DefaultSAGEID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MISC3</Value>
+    </Setting>
+    <Setting Name="DefaultTaxCode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="DefaultNominal" Type="System.String" Scope="User">
+      <Value Profile="(Default)">41100</Value>
+    </Setting>
+    <Setting Name="SqlInstallMappings" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SOPID,InstallID,InstallDate,OriginalInstallDate,RAG,InstallNumber,OpsDate</Value>
+    </Setting>
+    <Setting Name="InstallSheetNumber" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="AutoImportSubCon" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SiteAddressColumn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">G</Value>
+    </Setting>
+    <Setting Name="ShowbizAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Show Business Interiors,Unit 1 Millbuck Way,Moston Road,Sandbach,Cheshire,CW11 3GQ</Value>
+    </Setting>
+    <Setting Name="DocuwareSaveLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">U:\sapos\pdf</Value>
+    </Setting>
+    <Setting Name="AdeptSaveLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">U:\sapos\csv</Value>
+    </Setting>
+    <Setting Name="POColumnWidths" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="POColumnOrders" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="POFrozenColumn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SOPID</Value>
+    </Setting>
+    <Setting Name="CarriageNominal" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">51100</Value>
+    </Setting>
+    <Setting Name="POTESTConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=SBI-SRV-07\SQLEXPRESS;Initial Catalog=POTEST;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=SBI-SRV-07\SQLEXPRESS;Initial Catalog=POTEST;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="sbi_salesdbConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=SBI-SRV-07\SQLEXPRESS;Initial Catalog=sbi_salesdb;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=SBI-SRV-07\SQLEXPRESS;Initial Catalog=sbi_salesdb;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="sbi_installdbConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=SBI-SRV-07\SQLEXPRESS;Initial Catalog=sbi_installdb;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=SBI-SRV-07\SQLEXPRESS;Initial Catalog=sbi_installdb;Integrated Security=True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

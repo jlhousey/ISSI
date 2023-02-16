@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA5DDC47-0291-408C-AD12-F0CF9207463D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ISSI</RootNamespace>
+    <AssemblyName>ISSI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Data.ConnectionUI">
+      <HintPath>..\packages\DataConnectionDialog.1.2\Lib\Microsoft.Data.ConnectionUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.ConnectionUI.Dialog">
+      <HintPath>..\packages\DataConnectionDialog.1.2\Lib\Microsoft.Data.ConnectionUI.Dialog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Outlook.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Outlook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MoreLinq, Version=2.5.20831.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
+      <HintPath>..\packages\morelinq.2.5.0\lib\net40\MoreLinq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContactList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactList.Designer.cs">
+      <DependentUpon>ContactList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLGenerator.cs" />
+    <Compile Include="ContactSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactSite.Designer.cs">
+      <DependentUpon>ContactSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditInstall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditInstall.Designer.cs">
+      <DependentUpon>EditInstall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatePicker.Designer.cs">
+      <DependentUpon>DatePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportPurchasing.cs" />
+    <Compile Include="InstallListAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallListAll.Designer.cs">
+      <DependentUpon>InstallListAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallList.Designer.cs">
+      <DependentUpon>InstallList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientList2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientList2.Designer.cs">
+      <DependentUpon>ClientList2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridPaste.cs" />
+    <Compile Include="DataGridValidator.cs" />
+    <Compile Include="DataMapping.cs" />
+    <Compile Include="EditArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditArea.Designer.cs">
+      <DependentUpon>EditArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditClient.Designer.cs">
+      <DependentUpon>EditClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditDAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDAM.Designer.cs">
+      <DependentUpon>EditDAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditDeveloper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDeveloper.Designer.cs">
+      <DependentUpon>EditDeveloper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditJob.Designer.cs">
+      <DependentUpon>EditJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditLine.Designer.cs">
+      <DependentUpon>EditLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRegion.Designer.cs">
+      <DependentUpon>EditRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSite.Designer.cs">
+      <DependentUpon>EditSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientList.Designer.cs">
+      <DependentUpon>ClientList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Job.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Job.Designer.cs">
+      <DependentUpon>Job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MovementDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MovementDialog.Designer.cs">
+      <DependentUpon>MovementDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateEmailDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerateEmailDialog.Designer.cs">
+      <DependentUpon>GenerateEmailDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sbi_installdbDataSet.cs">
+      <DependentUpon>sbi_installdbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sbi_installdbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sbi_installdbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchDialog.Designer.cs">
+      <DependentUpon>SearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterByDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterByDialog.Designer.cs">
+      <DependentUpon>FilterByDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportSubCon.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScreen.designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavButtons.designer.cs">
+      <DependentUpon>NavButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sbi_salesdbDataSet.cs">
+      <DependentUpon>sbi_salesdbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sbi_salesdbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sbi_salesdbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDAM.Designer.cs">
+      <DependentUpon>SelectDAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDeveloper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDeveloper.Designer.cs">
+      <DependentUpon>SelectDeveloper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectClient.Designer.cs">
+      <DependentUpon>SelectClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectJob.Designer.cs">
+      <DependentUpon>SelectJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectSite.Designer.cs">
+      <DependentUpon>SelectSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session.cs" />
+    <Compile Include="SOPReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOPReg.Designer.cs">
+      <DependentUpon>SOPReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubContractSchedules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubContractSchedules.Designer.cs">
+      <DependentUpon>SubContractSchedules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPurchasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPurchasing.Designer.cs">
+      <DependentUpon>ViewPurchasing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeekView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeekView.Designer.cs">
+      <DependentUpon>WeekView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XlFileHandler.cs" />
+    <Compile Include="XlFileImporter.cs" />
+    <EmbeddedResource Include="ContactList.resx">
+      <DependentUpon>ContactList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactSite.resx">
+      <DependentUpon>ContactSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatePicker.resx">
+      <DependentUpon>DatePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditInstall.resx">
+      <DependentUpon>EditInstall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallListAll.resx">
+      <DependentUpon>InstallListAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallList.resx">
+      <DependentUpon>InstallList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientList2.resx">
+      <DependentUpon>ClientList2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditArea.resx">
+      <DependentUpon>EditArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditClient.resx">
+      <DependentUpon>EditClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDAM.resx">
+      <DependentUpon>EditDAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDeveloper.resx">
+      <DependentUpon>EditDeveloper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditJob.resx">
+      <DependentUpon>EditJob.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditLine.resx">
+      <DependentUpon>EditLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRegion.resx">
+      <DependentUpon>EditRegion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSite.resx">
+      <DependentUpon>EditSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Job.resx">
+      <DependentUpon>Job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovementDialog.resx">
+      <DependentUpon>MovementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerateEmailDialog.resx">
+      <DependentUpon>GenerateEmailDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchDialog.resx">
+      <DependentUpon>SearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterByDialog.resx">
+      <DependentUpon>FilterByDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientList.resx">
+      <DependentUpon>ClientList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavButtons.resx">
+      <DependentUpon>NavButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SelectDAM.resx">
+      <DependentUpon>SelectDAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectDeveloper.resx">
+      <DependentUpon>SelectDeveloper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectClient.resx">
+      <DependentUpon>SelectClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectJob.resx">
+      <DependentUpon>SelectJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectSite.resx">
+      <DependentUpon>SelectSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOPReg.resx">
+      <DependentUpon>SOPReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubContractSchedules.resx">
+      <DependentUpon>SubContractSchedules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPurchasing.resx">
+      <DependentUpon>ViewPurchasing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeekView.resx">
+      <DependentUpon>WeekView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="sbi_installdbDataSet.xsc">
+      <DependentUpon>sbi_installdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sbi_installdbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sbi_installdbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sbi_installdbDataSet.xss">
+      <DependentUpon>sbi_installdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sbi_salesdbDataSet.xsc">
+      <DependentUpon>sbi_salesdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sbi_salesdbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sbi_salesdbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sbi_salesdbDataSet.xss">
+      <DependentUpon>sbi_salesdbDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-Clear Filters-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTMLPage1.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
